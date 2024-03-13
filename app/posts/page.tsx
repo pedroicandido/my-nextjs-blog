@@ -1,7 +1,5 @@
-import FeaturedPosts from "@/components/home-page/featured-posts";
-import Hero from "@/components/home-page/hero";
+import AllPosts from "@/components/posts/all-posts";
 import { Post } from "@/components/posts/types/post";
-
 const DUMMY_DATA: [Post] = [
   {
     slug: "getting-started-with-nextjs3",
@@ -12,11 +10,6 @@ const DUMMY_DATA: [Post] = [
   },
 ];
 
-export default function HomePage() {
-  return (
-    <>
-      <Hero />
-      <FeaturedPosts posts={DUMMY_DATA} />
-    </>
-  );
+export default function PostsPage() {
+  return <AllPosts posts={DUMMY_DATA} />;
 }
